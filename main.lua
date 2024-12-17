@@ -84,7 +84,7 @@ SpeedLabel.TextSize = 18
 -- Update the speed label dynamically
 SpeedTextBox.FocusLost:Connect(function()
     local inputValue = tonumber(SpeedTextBox.Text)
-    if inputValue and inputValue >= 10000 then
+    if inputValue and inputValue >= 1 then
         SpeedLabel.Text = "Shot Speed: " .. inputValue
     else
         SpeedLabel.Text = "Invalid input! Using minimum: 10000"
