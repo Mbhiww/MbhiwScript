@@ -87,8 +87,8 @@ SpeedTextBox.FocusLost:Connect(function()
     if inputValue and inputValue >= 1 then
         SpeedLabel.Text = "Shot Speed: " .. inputValue
     else
-        SpeedLabel.Text = "Invalid input! Using minimum: 10000"
-        SpeedTextBox.Text = "10000"
+        SpeedLabel.Text = "Invalid input! Using minimum: 1"
+        SpeedTextBox.Text = "1"
     end
 end)
 
