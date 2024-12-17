@@ -96,7 +96,7 @@ end)
 local function shootFastDown()
     -- Get the shot speed, ensure it is at least 10000
     local inputSpeed = tonumber(SpeedTextBox.Text) or 10000
-    local shotPower = math.max(inputSpeed, 10000)
+    local shotPower = math.clamp(inputSpeed, 1, 10000) -- Batas minimum 1, maksimum 50000
     local downwardDirection = Vector3.new(0, -50, -100)
 
     -- Fire the server to shoot the ball
